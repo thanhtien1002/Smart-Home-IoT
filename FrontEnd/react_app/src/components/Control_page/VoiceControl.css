@@ -1,0 +1,47 @@
+.voice-control {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.voice-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.voice-btn:hover {
+  background-color: #e5e5e5;
+}
+
+.voice-btn.listening {
+  background-color: #ff4b4b;
+  color: white;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.transcript {
+  margin-left: 8px;
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+}

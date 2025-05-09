@@ -1,0 +1,77 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin: 0;
+  }
+  
+  .user-avatar {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;  /* Cần thiết cho transform hoạt động tốt */
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  .user-avatar:hover {
+    color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: rgba(11, 34, 60, 0.21);
+  }
+  
+  .user-avatar:active {
+    transform: scale(0.8);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: rgba(11, 34, 60, 0.21);
+  }
+
+  .user-profile {
+    position: relative;
+  }
+
+  .user-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 5px;
+    z-index: 100;
+    min-width: 150px;
+    overflow: hidden;
+  }
+
+  .user-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .user-menu li {
+    padding: 12px 15px;
+    cursor: pointer;
+    border-top: 1px solid #000000;
+    transition: background-color 0.2s;
+  }
+
+  .user-menu li.first_item {
+    border-top: none;
+  }
+
+  .user-menu li:hover {
+    background-color: rgba(74, 144, 226, 0.1);
+    color: var(--primary-color);
+  }
+  

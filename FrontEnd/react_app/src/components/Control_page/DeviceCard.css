@@ -1,0 +1,239 @@
+.device-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  
+.device-card.active {
+  border-left: 4px solid var(--active-color);
+}
+
+.device-card.inactive {
+  border-left: 4px solid var(--inactive-color);
+}
+
+.device-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.device-info {
+  flex-grow: 1;
+}
+
+.device-info h4 {
+  margin-bottom: 0.25rem;
+}
+
+.device-info p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  z-index: 10;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--active-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--active-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Temperature Control */
+.temp-control {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.temp-control button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.temp-control span {
+  margin: 0 0.5rem;
+}
+
+/* ... Giữ các CSS hiện có ... */
+
+/* Color Controls */
+.color-control {
+  margin-top: 0.5rem;
+}
+
+.color-btn {
+  display: flex;
+  align-items: center;
+  padding: 3px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #b1aaaa;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.color-btn:hover {
+  background-color: #e5e5e5;
+}
+
+.color-preview {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+}
+
+.rgb-controls {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #b1aaaa;
+  position: absolute;
+  z-index: 20;
+}
+
+.rgb-slider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.rgb-slider .icon_label {
+  width: 20px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.rgb-slider input {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.rgb-slider span {
+  width: 30px;
+  text-align: right;
+}
+
+
+.rgb-slider input[type="text"] {
+  width: 45px;
+  text-align: center;
+  border: 1.7px solid #ddd;
+  border-radius: 4px;
+  padding: 3px 5px;
+  font-size: 0.85rem;
+  background-color: white;
+  color: var(--text-color);
+  transition: all 0.2s ease;
+  outline: none;
+  /* box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); */
+}
+
+/* .rgb-slider input[type="text"]:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+} */
+
+.rgb-slider:nth-child(1) input[type="text"] {
+  border-color: #ff5252;
+  /* box-shadow: 0 0 0 2px rgba(255, 82, 82, 0.2); */
+}
+
+.rgb-slider:nth-child(2) input[type="text"] {
+  border-color: #4caf50;
+  /* box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2); */
+}
+
+.rgb-slider:nth-child(3) input[type="text"] {
+  border-color: #2196f3;
+  /* box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2); */
+}
+
+.preset-colors {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.preset-colors button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.preset-colors button:hover {
+  transform: scale(1.2);
+}

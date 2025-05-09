@@ -1,0 +1,27 @@
+.status-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .status-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  
+  .status-card h3 {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+  
+  .status-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
