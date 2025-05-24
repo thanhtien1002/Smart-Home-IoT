@@ -131,6 +131,3 @@ Create a `.env` file in the relevant folders with the following content:
 ## Authors
 - Thanh Tien
 ---
-
-## License
-This project is for educational purposes. Please check individual files for copyright notes.
