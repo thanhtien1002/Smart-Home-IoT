@@ -129,9 +129,7 @@ Create a `.env` file in the relevant folders with the following content:
 ---
 
 ## Authors
-- [Your Name]
-- [Contributors]
-
+- Thanh Tien
 ---
 
 ## License
